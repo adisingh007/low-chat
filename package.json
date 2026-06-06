@@ -1,0 +1,26 @@
+{
+  "name": "low-chat",
+  "version": "1.0.0",
+  "description": "A customer-support app based on lowDB",
+  "homepage": "https://github.com/adisingh007/low-chat#readme",
+  "bugs": {
+    "url": "https://github.com/adisingh007/low-chat/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adisingh007/low-chat.git"
+  },
+  "license": "ISC",
+  "author": "Aditya Singh",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "lowdb": "^7.0.1",
+    "nanoid": "^5.1.11"
+  }
+}
