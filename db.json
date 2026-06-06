@@ -19,57 +19,261 @@
     {
       "sender_email": "customer@example.com",
       "receiver_email": "agent@example.com",
-      "content": "Hey"
+      "content": "Hey",
+      "id": "BJYX7NA52eO2ej-i-Y9k5",
+      "read": true
     },
     {
       "sender_email": "agent@example.com",
       "receiver_email": "customer@example.com",
-      "content": "What?"
+      "content": "What?",
+      "id": "KMN_P4KcPIDn0WNdPeAbc",
+      "read": true
     },
     {
       "sender_email": "customer@example.com",
       "receiver_email": "agent@example.com",
-      "content": "Are you seeing this message?"
+      "content": "Are you seeing this message?",
+      "id": "oV8lmyYHLOn-RoCMhVSNf",
+      "read": true
     },
     {
       "sender_email": "agent@example.com",
       "receiver_email": "customer@example.com",
-      "content": "No!"
+      "content": "No!",
+      "id": "-1Z33n_JGzedAyv1yvFpq",
+      "read": true
     },
     {
       "sender_email": "customer@example.com",
       "receiver_email": "agent@example.com",
-      "content": "Hah! Bummer"
+      "content": "Hah! Bummer",
+      "id": "XZr-76Itw148LhxtNLku9",
+      "read": true
     },
     {
       "sender_email": "agent@example.com",
       "receiver_email": "customer@example.com",
-      "content": ":@"
+      "content": ":@",
+      "id": "3e8NfG7QyeGO2YAqTvCfw",
+      "read": true
     },
     {
       "sender_email": "customer2@example.com",
       "receiver_email": "agent@example.com",
-      "content": "Hey! I have an issue with order #435"
+      "content": "Hey! I have an issue with order #435",
+      "id": "4av5fiJqRohMSP2DvsTiH",
+      "read": true
     },
     {
       "sender_email": "agent@example.com",
       "receiver_email": "customer2@example.com",
-      "content": "What is it?"
+      "content": "What is it?",
+      "id": "YhLJYsewbiXf7t27qjy1l",
+      "read": true
     },
     {
       "sender_email": "customer2@example.com",
       "receiver_email": "agent@example.com",
-      "content": "I ordered a soap, and you sent me a BRICK?"
+      "content": "I ordered a soap, and you sent me a BRICK?",
+      "id": "hPtWLrbOMOGUYAU2rbjmV",
+      "read": true
     },
     {
       "sender_email": "agent@example.com",
       "receiver_email": "customer2@example.com",
-      "content": "Lul! Wutt??? :D"
+      "content": "Lul! Wutt??? :D",
+      "id": "anXV7VeH6ASvSKagRYWi4",
+      "read": true
     },
     {
       "sender_email": "customer2@example.com",
       "receiver_email": "agent@example.com",
-      "content": ":@"
+      "content": ":@",
+      "id": "ybKghdSJNwRtPEymjLb03",
+      "read": true
+    },
+    {
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Hah!",
+      "id": "BpuIve-a1qhWp0qjHGaSy",
+      "read": true
+    },
+    {
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer@example.com",
+      "content": "Wut? Do you want to buy a BRICK?",
+      "id": "JaRV020raLkkcgpu-6SCF",
+      "read": true
+    },
+    {
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Why would I buy a BRICK?",
+      "id": "21UC52Vuf9FY4dps1-Lli",
+      "read": true
+    },
+    {
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer@example.com",
+      "content": "People with your IQ do so. That's why!",
+      "id": "ie5iKIIy4Yg_ola1YDDTE",
+      "read": true
+    },
+    {
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Funny! Huh!",
+      "id": "YmjKvUTKGIev3kOSAPRSZ",
+      "read": true
+    },
+    {
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Refund my money. I am placing a \"return\" order.",
+      "id": "3At5Snfm6ZcdfDVLnM0eU",
+      "read": true
+    },
+    {
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer2@example.com",
+      "content": "Ya whatever! I know an idiot I can sell this Brick to.",
+      "id": "rsl_o-E9zMmPpLvx-tRXV",
+      "read": true
+    },
+    {
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer@example.com",
+      "content": "500 USD",
+      "id": "iyvVKQg6BbSa6yjcKzP_T",
+      "read": true
+    },
+    {
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": ":/",
+      "id": "L8CFvAAs7jfBlj7zpZUsL",
+      "read": true
+    },
+    {
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Sent.",
+      "id": "rrEcY0MdiOdSmv1T-aQA3",
+      "read": true
+    },
+    {
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer@example.com",
+      "content": "Haha! Knew it.",
+      "id": "PpT81m0we8lObEPruVe2h",
+      "read": true
+    },
+    {
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer2@example.com",
+      "content": "Haha! Sold. Send it to Arizona instead. Take your $5 back. Wiring it.",
+      "id": "_HMV9RkM2UlXWItRf7rVW",
+      "read": true
+    },
+    {
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Got it. Thanks.",
+      "id": "yoT-b0Cti2NAwadBFEcv7",
+      "read": true
+    },
+    {
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Sent it to Arizona",
+      "id": "LdqnM2uysS7ZcP2Zz-Z6c",
+      "read": true
+    },
+    {
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "lol!",
+      "id": "zWlgndAmxe0RoTqsIi9q0",
+      "read": true
+    },
+    {
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer@example.com",
+      "content": "Enjoy :D",
+      "id": "FbdmYW0OcskIFXA2XXO1Y",
+      "read": true
+    },
+    {
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": ":D",
+      "id": "0pjnBNU_xK-d9a_uRW9Uq",
+      "read": true
+    },
+    {
+      "id": "ycvuvHC6dVoqsuFWxls-0",
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Read receipt test",
+      "read": true
+    },
+    {
+      "id": "BwcACFQU9ILNkZtF1AoQc",
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "I did not receive the brick yet!",
+      "read": true
+    },
+    {
+      "id": "1SiUmZT0Dz0EV9s8aTi_9",
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Are you even sending it?",
+      "read": true
+    },
+    {
+      "id": "9BnoAJfchWP6F4Hp3-iei",
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Lol! Sent to to Florida by mistake.",
+      "read": true
+    },
+    {
+      "id": "8Vral0b1SHDWJiO1dByn9",
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer2@example.com",
+      "content": "lol! What a bum!",
+      "read": true
+    },
+    {
+      "id": "GF9ImY5yiXQ3Nzc-QfACX",
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "I know right :D",
+      "read": true
+    },
+    {
+      "id": "sl9BLVV2aym_01KBqptMy",
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer2@example.com",
+      "content": "Bwahahahaha",
+      "read": true
+    },
+    {
+      "id": "VyrTvfSDivPd69_bMrcyY",
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer@example.com",
+      "content": "xD you mad bruh! you mad!",
+      "read": true
+    },
+    {
+      "id": "oH_7QlUJ6StU2i4FpODBk",
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "xD",
+      "read": true
     }
   ]
 }
