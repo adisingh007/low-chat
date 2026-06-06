@@ -1,0 +1,56 @@
+{
+  "agents": [
+    {
+      "id": "HB5iiLVm7LP6s691sIViv",
+      "email": "agent@example.com"
+    }
+  ],
+  "customers": [
+    {
+      "id": "cWckB5A36uUl1DUdXmmTz",
+      "email": "customer@example.com"
+    }
+  ],
+  "messages": [
+    {
+      "email": "customer@example.com",
+      "content": "Hello from customer"
+    },
+    {
+      "email": "agent@example.com",
+      "content": "Hello from agent"
+    },
+    {
+      "email": "customer@example.com",
+      "content": "Hello from customer"
+    },
+    {
+      "email": "agent@example.com",
+      "content": "Reply from agent"
+    },
+    {
+      "email": "customer@example.com",
+      "content": "Need help with order #453"
+    },
+    {
+      "email": "agent@example.com",
+      "content": "Please share your concern with order #453"
+    },
+    {
+      "email": "customer@example.com",
+      "content": "I ordered an iPhone 17 Pro Max"
+    },
+    {
+      "email": "agent@example.com",
+      "content": "And?"
+    },
+    {
+      "email": "customer@example.com",
+      "content": "I got a FRICKIN SOAP"
+    },
+    {
+      "email": "agent@example.com",
+      "content": "LOL! Funny"
+    }
+  ]
+}
