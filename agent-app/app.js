@@ -1,4 +1,5 @@
 const MY_EMAIL = 'agent@example.com';
+const TARGET_EMAIL = 'customer@example.com';
 const API_URL = 'http://localhost:3000/api/messages';
 
 $('#loggedInAs').text(`Logged in as: ${MY_EMAIL}`);
@@ -9,12 +10,17 @@ async function fetchAndRenderMessages() {
 
   $('#messages').empty();
 
-  messages.forEach((message) => {
-    const side = message.email === MY_EMAIL ? 'mine' : 'theirs';
+  const filteredMessages = messages.filter((message) => (
+    (message.sender_email === MY_EMAIL && message.receiver_email === TARGET_EMAIL) ||
+    (message.sender_email === TARGET_EMAIL && message.receiver_email === MY_EMAIL)
+  ));
+
+  filteredMessages.forEach((message) => {
+    const side = message.sender_email === MY_EMAIL ? 'mine' : 'theirs';
     const $row = $('<div>').addClass(`message-row ${side}`);
     const $bubble = $('<div>').addClass('message');
 
-    $bubble.append($('<div>').addClass('message-email').text(message.email));
+    $bubble.append($('<div>').addClass('message-email').text(message.sender_email));
     $bubble.append($('<div>').addClass('message-content').text(message.content));
     $row.append($bubble);
     $('#messages').append($row);
@@ -36,7 +42,8 @@ async function sendMessage() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      email: MY_EMAIL,
+      sender_email: MY_EMAIL,
+      receiver_email: TARGET_EMAIL,
       content,
     }),
   });

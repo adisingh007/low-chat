@@ -27,6 +27,10 @@ async function start() {
       id: nanoid(),
       email: 'customer@example.com',
     });
+    db.data.customers.push({
+      id: nanoid(),
+      email: 'customer2@example.com',
+    });
   }
 
   await db.write();
@@ -39,23 +43,39 @@ async function start() {
     res.json(db.data.messages);
   });
 
+  app.get('/api/customers', (req, res) => {
+    res.json(db.data.customers);
+  });
+
   app.put('/api/messages', async (req, res) => {
     if (!req.is('application/json')) {
       return res.status(400).json({ error: 'JSON content type is required' });
     }
 
-    const { email, content } = req.body;
+    const { sender_email, receiver_email, content } = req.body;
 
-    if (!email) {
-      return res.status(400).json({ error: 'Email is required' });
+    if (!sender_email) {
+      return res.status(400).json({ error: 'Sender email is required' });
     }
 
-    const userExists =
-      db.data.agents.some((agent) => agent.email === email) ||
-      db.data.customers.some((customer) => customer.email === email);
+    if (!receiver_email) {
+      return res.status(400).json({ error: 'Receiver email is required' });
+    }
 
-    if (!userExists) {
-      return res.status(404).json({ error: 'User not found' });
+    const senderExists =
+      db.data.agents.some((agent) => agent.email === sender_email) ||
+      db.data.customers.some((customer) => customer.email === sender_email);
+
+    if (!senderExists) {
+      return res.status(404).json({ error: 'Sender not found' });
+    }
+
+    const receiverExists =
+      db.data.agents.some((agent) => agent.email === receiver_email) ||
+      db.data.customers.some((customer) => customer.email === receiver_email);
+
+    if (!receiverExists) {
+      return res.status(404).json({ error: 'Receiver not found' });
     }
 
     const trimmedContent = String(content || '').trim();
@@ -65,7 +85,8 @@ async function start() {
     }
 
     const message = {
-      email,
+      sender_email,
+      receiver_email,
       content: trimmedContent,
     };
 
