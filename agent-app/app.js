@@ -1,8 +1,30 @@
 const MY_EMAIL = 'agent@example.com';
-const TARGET_EMAIL = 'customer@example.com';
+let TARGET_EMAIL = 'customer@example.com';
 const API_URL = 'http://localhost:3000/api/messages';
+const CUSTOMERS_API_URL = 'http://localhost:3000/api/customers';
 
 $('#loggedInAs').text(`Logged in as: ${MY_EMAIL}`);
+
+async function fetchAndRenderCustomers() {
+  const response = await fetch(CUSTOMERS_API_URL);
+  const customers = await response.json();
+  const uniqueEmails = [...new Set(customers.map((customer) => customer.email))];
+
+  $('#customers').empty();
+
+  uniqueEmails.forEach((email) => {
+    const $customer = $('<button>')
+      .addClass(`customer-item ${email === TARGET_EMAIL ? 'active' : ''}`)
+      .text(email)
+      .on('click', async () => {
+        TARGET_EMAIL = email;
+        await fetchAndRenderCustomers();
+        await fetchAndRenderMessages();
+      });
+
+    $('#customers').append($customer);
+  });
+}
 
 async function fetchAndRenderMessages() {
   const response = await fetch(API_URL);
@@ -60,5 +82,6 @@ $('#messageInput').on('keydown', (event) => {
   }
 });
 
+fetchAndRenderCustomers();
 fetchAndRenderMessages();
 setInterval(fetchAndRenderMessages, 3000);

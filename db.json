@@ -1,80 +1,75 @@
 {
   "agents": [
     {
-      "id": "HB5iiLVm7LP6s691sIViv",
+      "id": "Hrq57aPReoj-GCbKcD3OE",
       "email": "agent@example.com"
     }
   ],
   "customers": [
     {
-      "id": "cWckB5A36uUl1DUdXmmTz",
+      "id": "brE_7xbw15g5VP1deWE0V",
       "email": "customer@example.com"
+    },
+    {
+      "id": "MbdvRuzzxTWc9AiWVl5RC",
+      "email": "customer2@example.com"
     }
   ],
   "messages": [
     {
-      "email": "customer@example.com",
-      "content": "Hello from customer"
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Hey"
     },
     {
-      "email": "agent@example.com",
-      "content": "Hello from agent"
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer@example.com",
+      "content": "What?"
     },
     {
-      "email": "customer@example.com",
-      "content": "Hello from customer"
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Are you seeing this message?"
     },
     {
-      "email": "agent@example.com",
-      "content": "Reply from agent"
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer@example.com",
+      "content": "No!"
     },
     {
-      "email": "customer@example.com",
-      "content": "Need help with order #453"
+      "sender_email": "customer@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Hah! Bummer"
     },
     {
-      "email": "agent@example.com",
-      "content": "Please share your concern with order #453"
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer@example.com",
+      "content": ":@"
     },
     {
-      "email": "customer@example.com",
-      "content": "I ordered an iPhone 17 Pro Max"
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "Hey! I have an issue with order #435"
     },
     {
-      "email": "agent@example.com",
-      "content": "And?"
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer2@example.com",
+      "content": "What is it?"
     },
     {
-      "email": "customer@example.com",
-      "content": "I got a FRICKIN SOAP"
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": "I ordered a soap, and you sent me a BRICK?"
     },
     {
-      "email": "agent@example.com",
-      "content": "LOL! Funny"
+      "sender_email": "agent@example.com",
+      "receiver_email": "customer2@example.com",
+      "content": "Lul! Wutt??? :D"
     },
     {
-      "email": "agent@example.com",
-      "content": "You like the SOAP?"
-    },
-    {
-      "email": "customer@example.com",
-      "content": "Are you crazy? This soap is also so unoriginal, it's all foam."
-    },
-    {
-      "email": "agent@example.com",
-      "content": "LOL! WUT? You really used it already bruv?"
-    },
-    {
-      "email": "customer@example.com",
-      "content": "Yaaaaa"
-    },
-    {
-      "email": "agent@example.com",
-      "content": "You mad bro? :D"
-    },
-    {
-      "email": "customer@example.com",
-      "content": "yeaaa"
+      "sender_email": "customer2@example.com",
+      "receiver_email": "agent@example.com",
+      "content": ":@"
     }
   ]
 }

@@ -8,13 +8,19 @@
 </head>
 <body>
   <main class="chat-shell">
-    <h1>Agent App</h1>
-    <p id="loggedInAs" class="login-label"></p>
-    <div id="messages" class="message-box"></div>
-    <div class="composer">
-      <input id="messageInput" type="text" placeholder="Type a message">
-      <button id="sendButton" type="button">SEND</button>
-    </div>
+    <section class="left-pane">
+      <h2>Customers</h2>
+      <div id="customers" class="customer-list"></div>
+    </section>
+    <section class="right-pane">
+      <h1>Agent App</h1>
+      <p id="loggedInAs" class="login-label"></p>
+      <div id="messages" class="message-box"></div>
+      <div class="composer">
+        <input id="messageInput" type="text" placeholder="Type a message">
+        <button id="sendButton" type="button">SEND</button>
+      </div>
+    </section>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

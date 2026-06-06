@@ -5,12 +5,50 @@ body {
 }
 
 .chat-shell {
-  width: 520px;
+  width: 900px;
   margin: 40px auto;
+  display: flex;
+  gap: 16px;
+}
+
+.left-pane {
+  width: 260px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.right-pane {
+  flex: 1;
 }
 
 h1 {
   text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.customer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.customer-item {
+  padding: 10px;
+  text-align: left;
+  background: #eeeeee;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.customer-item.active {
+  background: #d7ecff;
+  font-weight: bold;
 }
 
 .login-label {
