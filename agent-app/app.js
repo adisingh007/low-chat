@@ -26,6 +26,26 @@ async function fetchAndRenderCustomers() {
   });
 }
 
+async function markMessagesAsRead(messages) {
+  const unreadMessages = messages.filter((message) => (
+    !message.read &&
+    message.receiver_email === MY_EMAIL &&
+    message.sender_email === TARGET_EMAIL
+  ));
+
+  await Promise.all(unreadMessages.map((message) => (
+    fetch(`${API_URL}/${message.id}/read`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: MY_EMAIL,
+      }),
+    })
+  )));
+}
+
 async function fetchAndRenderMessages() {
   const response = await fetch(API_URL);
   const messages = await response.json();
@@ -37,13 +57,23 @@ async function fetchAndRenderMessages() {
     (message.sender_email === TARGET_EMAIL && message.receiver_email === MY_EMAIL)
   ));
 
+  await markMessagesAsRead(filteredMessages);
+
   filteredMessages.forEach((message) => {
     const side = message.sender_email === MY_EMAIL ? 'mine' : 'theirs';
     const $row = $('<div>').addClass(`message-row ${side}`);
     const $bubble = $('<div>').addClass('message');
 
     $bubble.append($('<div>').addClass('message-email').text(message.sender_email));
-    $bubble.append($('<div>').addClass('message-content').text(message.content));
+    const $content = $('<div>').addClass('message-content').text(message.content);
+
+    if (message.sender_email === MY_EMAIL) {
+      $content.append(
+        $('<span>').addClass(`read-tick ${message.read ? 'read' : ''}`).text('✓')
+      );
+    }
+
+    $bubble.append($content);
     $row.append($bubble);
     $('#messages').append($row);
   });

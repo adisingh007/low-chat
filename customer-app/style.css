@@ -17,6 +17,17 @@ h1 {
   text-align: center;
 }
 
+.customer-selector {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#customerSelect {
+  padding: 6px;
+}
+
 .message-box {
   height: 520px;
   overflow-y: auto;
@@ -54,6 +65,15 @@ h1 {
   font-size: 12px;
   font-weight: bold;
   margin-bottom: 6px;
+}
+
+.read-tick {
+  color: #000000;
+  margin-left: 8px;
+}
+
+.read-tick.read {
+  color: #0077ff;
 }
 
 .composer {

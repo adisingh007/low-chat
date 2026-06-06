@@ -94,6 +94,15 @@ h2 {
   margin-bottom: 6px;
 }
 
+.read-tick {
+  color: #000000;
+  margin-left: 8px;
+}
+
+.read-tick.read {
+  color: #0077ff;
+}
+
 .composer {
   display: flex;
   gap: 8px;

@@ -14,6 +14,10 @@ async function start() {
   db.data.agents ||= [];
   db.data.customers ||= [];
   db.data.messages ||= [];
+  db.data.messages.forEach((message) => {
+    message.id ||= nanoid();
+    message.read = typeof message.read === 'boolean' ? message.read : false;
+  });
 
   if (db.data.agents.length === 0) {
     db.data.agents.push({
@@ -45,6 +49,28 @@ async function start() {
 
   app.get('/api/customers', (req, res) => {
     res.json(db.data.customers);
+  });
+
+  app.patch('/api/messages/:messageId/read', async (req, res) => {
+    if (!req.is('application/json')) {
+      return res.status(400).json({ error: 'JSON content type is required' });
+    }
+
+    const { email } = req.body;
+    const message = db.data.messages.find((item) => item.id === req.params.messageId);
+
+    if (!message) {
+      return res.status(404).json({ error: 'Message not found' });
+    }
+
+    if (message.receiver_email !== email) {
+      return res.status(400).json({ error: 'Receiver email does not match' });
+    }
+
+    message.read = true;
+    await db.write();
+
+    res.json(message);
   });
 
   app.put('/api/messages', async (req, res) => {
@@ -85,9 +111,11 @@ async function start() {
     }
 
     const message = {
+      id: nanoid(),
       sender_email,
       receiver_email,
       content: trimmedContent,
+      read: false,
     };
 
     db.data.messages.push(message);
