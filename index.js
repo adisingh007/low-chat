@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 async function start() {
   const { JSONFilePreset } = await import('lowdb/node');
@@ -31,6 +32,7 @@ async function start() {
   await db.write();
 
   const app = express();
+  app.use(cors());
   app.use(express.json());
 
   app.get('/api/messages', (req, res) => {
