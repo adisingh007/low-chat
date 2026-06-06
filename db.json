@@ -51,6 +51,30 @@
     {
       "email": "agent@example.com",
       "content": "LOL! Funny"
+    },
+    {
+      "email": "agent@example.com",
+      "content": "You like the SOAP?"
+    },
+    {
+      "email": "customer@example.com",
+      "content": "Are you crazy? This soap is also so unoriginal, it's all foam."
+    },
+    {
+      "email": "agent@example.com",
+      "content": "LOL! WUT? You really used it already bruv?"
+    },
+    {
+      "email": "customer@example.com",
+      "content": "Yaaaaa"
+    },
+    {
+      "email": "agent@example.com",
+      "content": "You mad bro? :D"
+    },
+    {
+      "email": "customer@example.com",
+      "content": "yeaaa"
     }
   ]
 }
